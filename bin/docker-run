@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'docker-run'
+
+options = DockerRun::Options.new(ARGV)
+DockerRun::CLI.new(options).run
