@@ -18,6 +18,10 @@ module DockerRun::Builders
       (@options.env_vars || {}).map{ |key,value| "-e #{key}=#{value}" }.join(" ")
     end
 
+    def build_flags
+      (@options.flags || []).join(" ")
+    end
+
     def prepare_command
       @options.command.join(" ")
     end
